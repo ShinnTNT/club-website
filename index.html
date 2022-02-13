@@ -1,0 +1,627 @@
+<!doctype html>
+<div class="loader-container">
+    <div class="loader">Loading...</div>
+</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pet Love</title>
+    <style>
+        .loader-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 2000;
+            background-color: white;
+        }
+        .loader {
+            color: #BD11FA;
+            font-size: 90px;
+            text-indent: -9999em;
+            overflow: hidden;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            margin: 72px auto;
+            position: relative;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+            animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+        }
+        @-webkit-keyframes load6 {
+            0% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            5%,
+            95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            10%,
+            59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+            100% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+        @keyframes load6 {
+            0% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            5%,
+            95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            10%,
+            59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+            100% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+        @-webkit-keyframes round {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes round {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+    <link rel="stylesheet" href="vendor/animate_it/animate.css">
+    <link rel="stylesheet" href="vendor/WOW-master/css/libs/animate.css">
+</head>
+<body>
+
+<header class="site-nav container-fluid wow fadeInDown">
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">
+                                    <img src="images/logo.png" class="logo">
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                        <li class="nav-item ms-3">
+                                            <a class="nav-link active"  aria-current="page" href="#home">Home</a>
+                                        </li>
+                                        <li class="nav-item ms-3">
+                                            <a class="nav-link" href="#event">Events</a>
+                                        </li>
+                                        <li class="nav-item ms-3">
+                                            <a class="nav-link" href="#about">Artists</a>
+                                        </li>
+                                        <li class="nav-item ms-3">
+                                            <a class="nav-link" href="#party">Party</a>
+                                        </li>
+                                        <li class="nav-item ms-4 signinBtn">
+                                           <button class="btn btn-primary contact-hv" style="width: 135px"><a href="#contact" style="color: white;text-decoration: none;transition: 0.5s">Contact</a></button>
+                                        </li>
+                                        <li class="nav-item ms-3">
+                                            <button class="btn btn-outline-primary" style="width: 135px">Sign Up</button>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<section id="home" class="container-fluid home">
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row min-vh-100 align-items-center">
+                    <div class="col-12 col-md-6">
+                        <div class="">
+                            <p class="text-white fw-bold wow rotateInDownLeft ani-delay-1" style="font-size: 14px">IT’S  NOT  JUST LOVE FOR  MUSIC</p>
+                            <h2 class="fw-bolder fs-1 wow fadeInLeft ani-delay-2" style="color: var(--primary)">Feel The Rhythm</h2>
+                            <button class="btn btn-primary mt-4 wow rollIn ani-delay-3 home-hv" style="width: 150px;font-size: 13px;height: 45px;border-radius: 6px">See All Events</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 wow slideInRight ani-delay-2">
+                        <div class="">
+                            <img src="images/2x/home2.png" class="home-right">
+                        </div>
+                    </div>
+                </div>
+                <div class="stick animated bounce" style="animation-iteration-count: infinite">
+                    <a href="#event" style="text-decoration: none">
+                        <i class="feather-arrow-up text-dark"></i>
+                    </a>
+                </div>
+                <div class="fix animated fadeInDown ani-delay-2">
+                    <a href="#home" style="text-decoration: none">
+                        <i class="feather-corner-left-up text-dark"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="event" class="container-fluid event">
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row min-vh-100">
+                    <div class="col-12 m-auto">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-6 wow slideInLeft">
+                                <div class="event-card event-hv" style="transition: 0.5s">
+                                   <div class="event-md-1" style="width: 450px;height: 478px;display: flex;justify-content: center;align-items: flex-end;">
+                                       <div style="padding: 0 15px;background-color: var(--background);opacity: 0.6;" class="event-md">
+                                           <div class="d-flex justify-content-between align-items-center p-3">
+                                               <h3 class="text-white">Award Events</h3>
+                                               <div class="">
+                                                   <i class="feather-calendar" style="color: var(--purple);font-size: 20px"></i>
+                                                   <small class="" style="color: var(--primary)">11.2.2022</small>
+                                               </div>
+                                           </div>
+                                           <p class="text-white event-md-2" style="width: 350px">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  doloremque doloribus minus nihil optio  quasi sint unde voluptas.</p>
+                                           <div class="d-flex justify-content-end me-3">
+                                               <i class="feather-map-pin me-2" style="color: var(--purple)"></i>
+                                               <p class="" style="color: var(--primary);font-size: 10px">New York,NV</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mt-3 wow lightSpeedIn ani-delay-2">
+                                    <button class="btn text-white event-btn-hv" style="background-color: var(--soft-primary); width: 128px; height: 33px; text-align: start; line-height: 10px;">Event</button>
+                                </div>
+                                <div class="slick-par wow slideInRight ani-delay-2-5">
+                                    <div class="e-md-1 d-flex justify-content-around align-items-center shadow mt-4" style="width: 600px;background-color: #f1f5f905">
+                                         <h1 class="fw-bolder" style="color:var(--purple)">28</h1>
+                                        <div class="d-flex flex-column">
+                                            <small class="" style="color: var(--primary);font-size: 11px">September</small>
+                                            <small class="" style="color: var(--primary);font-size: 11px">Friday</small>
+                                        </div>
+                                        <p class="fw-bolder text-white pt-3" style="font-size: 13px">The legendary DJ Supernova</p>
+                                        <small style="color: var(--primary);font-size: 11px">9pm-4am</small>
+                                        <div>
+                                            <button class="btn text-white event-btn-hv2" style="background-color: var(--purple)">Book Event</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="e-md-1 d-flex justify-content-around align-items-center shadow mt-4" style="width: 600px;background-color: #f1f5f905">
+                                        <h1 class="fw-bolder" style="color:var(--purple)">28</h1>
+                                        <div class="d-flex flex-column">
+                                            <small class="" style="color: var(--primary);font-size: 11px">September</small>
+                                            <small class="" style="color: var(--primary);font-size: 11px">Friday</small>
+                                        </div>
+                                        <p class="fw-bolder text-white pt-3" style="font-size: 13px">The legendary DJ Supernova</p>
+                                        <small style="color: var(--primary);font-size: 11px">9pm-4am</small>
+                                        <div>
+                                            <button class="btn text-white event-btn-hv2" style="background-color: var(--purple)">Book Event</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="e-md-1 d-flex justify-content-around align-items-center shadow mt-4" style="width: 600px;background-color: #f1f5f905">
+                                        <h1 class="fw-bolder" style="color:var(--purple)">28</h1>
+                                        <div class="d-flex flex-column">
+                                            <small class="" style="color: var(--primary);font-size: 11px">September</small>
+                                            <small class="" style="color: var(--primary);font-size: 11px">Friday</small>
+                                        </div>
+                                        <p class="fw-bolder text-white pt-3" style="font-size: 13px">The legendary DJ Supernova</p>
+                                        <small style="color: var(--primary);font-size: 11px">9pm-4am</small>
+                                        <div>
+                                            <button class="btn text-white event-btn-hv2" style="background-color: var(--purple)">Book Event</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="e-md-1 d-flex justify-content-around align-items-center shadow mt-4" style="width: 600px;background-color: #f1f5f905">
+                                        <h1 class="fw-bolder" style="color:var(--purple)">28</h1>
+                                        <div class="d-flex flex-column">
+                                            <small class="" style="color: var(--primary);font-size: 11px">September</small>
+                                            <small class="" style="color: var(--primary);font-size: 11px">Friday</small>
+                                        </div>
+                                        <p class="fw-bolder text-white pt-3" style="font-size: 13px">The legendary DJ Supernova</p>
+                                        <small style="color: var(--primary);font-size: 11px">9pm-4am</small>
+                                        <div>
+                                            <button class="btn text-white event-btn-hv2" style="background-color: var(--purple)">Book Event</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="e-md-1 d-flex justify-content-around align-items-center shadow mt-4" style="width: 600px;background-color: #f1f5f905">
+                                        <h1 class="fw-bolder" style="color:var(--purple)">28</h1>
+                                        <div class="d-flex flex-column">
+                                            <small class="" style="color: var(--primary);font-size: 11px">September</small>
+                                            <small class="" style="color: var(--primary);font-size: 11px">Friday</small>
+                                        </div>
+                                        <p class="fw-bolder text-white pt-3" style="font-size: 13px">The legendary DJ Supernova</p>
+                                        <small style="color: var(--primary);font-size: 11px">9pm-4am</small>
+                                        <div>
+                                            <button class="btn text-white event-btn-hv2" style="background-color: var(--purple)">Book Event</button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 text-end btn-md-event wow fadeInDownBig ani-delay-2-6" style="width: 589px">
+                                        <button class="btn btn-outline-primary" style="width: 52px">
+                                            <i class="feather-arrow-left"></i>
+                                        </button>
+                                        <button class="btn btn-outline-primary" style="width: 52px">
+                                            <i class="feather-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about" class="container-fluid about">
+    <div class="row">
+        <div class="col-12">
+            <div class="container about-md">
+                <div class="row  min-vh-100">
+                    <div class="col-12 m-auto">
+                        <div class="row" style="background-color: var(--background3);">
+                            <div class="col-12 mt-3 wow fadeIn">
+                                <h4 class="fw-bolder text-center" style="color: var(--primary)" >ARTIST</h4>
+                            </div>
+                            <div class="col-12">
+                                <div class="contain">
+                                    <div class="slick-mom d-flex justify-content-around" id="slick-mom1">
+
+                                       <div class="col-12 col-md-4 wow fadeInLeft ani-delay-1 artist-hv" style="transition: 0.5s">
+                                           <div class="card card-1 shadow mt-5" style="width: 300px;height: 270px">
+                                               <div class="card-header d-flex justify-content-between">
+                                                   <div class="d-flex  justify-content-center">
+                                                       <i class="feather-map-pin" style="color: var(--purple);font-size: 16px"></i>
+                                                       <p class="ms-2 fw-bolder" style="font-size: 10px;color: var(--primary)">New York,NY</p>
+                                                   </div>
+                                                   <p class="fw-bolder" style="font-size: 10px;color: var(--primary)">Musician</p>
+                                               </div>
+                                               <div class="card-body">
+                                                   <div class="card-child">
+                                                       <p class="text-white fw-bolder">Blake Shelton</p>
+                                                       <div class="cross"></div>
+                                                       <p style="width: 250px;font-size: 11px;color: #f8f9fa;margin-top: 10px;">Lorem ipsum dolor sit amet, atque eaque eius esse et harum inventore ipsam  nam necessi is the tatibus nemo pariatur provident.</p>
+                                                   </div>
+                                               </div>
+
+                                           </div>
+                                       </div>
+
+                                        <div class="col-12 col-md-4 wow fadeInLeft ani-delay-2 artist-hv"  style="transition: 0.5s">
+                                            <div class="card card-2 shadow mt-5" style="width: 300px;height: 270px">
+                                                <div class="card-header d-flex justify-content-between">
+                                                    <div class="d-flex  justify-content-center">
+                                                        <i class="feather-map-pin" style="color: var(--purple);font-size: 16px"></i>
+                                                        <p class="ms-2 fw-bolder" style="font-size: 10px;color: var(--primary)">New York,NY</p>
+                                                    </div>
+                                                    <p class="fw-bolder" style="font-size: 10px;color: var(--primary)">Musician</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="card-child">
+                                                        <p class="text-white fw-bolder">Steve Angello</p>
+                                                        <div class="cross"></div>
+                                                        <p style="width: 250px;font-size: 11px;color: #f8f9fa;margin-top: 10px;">Lorem ipsum dolor sit amet, atque eaque eius esse et harum inventore ipsam  nam necessi is the tatibus nemo pariatur provident.</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                       <div class="col-12 col-md-4 wow fadeInLeft ani-delay-2-5 artist-hv " style="transition: 0.5s">
+                                           <div class="card card-3 shadow mt-5" style="width: 300px;height: 270px">
+                                               <div class="card-header d-flex justify-content-between">
+                                                   <div class="d-flex  justify-content-center">
+                                                       <i class="feather-map-pin" style="color: var(--purple);font-size: 16px"></i>
+                                                       <p class="ms-2 fw-bolder" style="font-size: 10px;color: var(--primary)">New York,NY</p>
+                                                   </div>
+                                                   <p class="fw-bolder" style="font-size: 10px;color: var(--primary)">Musician</p>
+                                               </div>
+                                               <div class="card-body">
+                                                   <div class="card-child">
+                                                       <p class="text-white fw-bolder">Blake Shelton</p>
+                                                       <div class="cross"></div>
+                                                       <p style="width: 250px;font-size: 11px;color: #f8f9fa;margin-top: 10px;">Lorem ipsum dolor sit amet, atque eaque eius esse et harum inventore ipsam  nam necessi is the tatibus nemo pariatur provident.</p>
+                                                   </div>
+                                               </div>
+
+                                           </div>
+                                       </div>
+
+                                        <div class="col-12 col-md-4 wow fadeInLeft ani-delay-2-6 artist-hv " style="transition: 0.5s">
+                                            <div class="card card-4 shadow mt-5" style="width: 300px;height: 270px">
+                                                <div class="card-header d-flex justify-content-between">
+                                                    <div class="d-flex  justify-content-center">
+                                                        <i class="feather-map-pin" style="color: var(--purple);font-size: 16px"></i>
+                                                        <p class="ms-2 fw-bolder" style="font-size: 10px;color: var(--primary)">New York,NY</p>
+                                                    </div>
+                                                    <p class="fw-bolder" style="font-size: 10px;color: var(--primary)">Musician</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="card-child">
+                                                        <p class="text-white fw-bolder">Blake Shelton</p>
+                                                        <div class="cross"></div>
+                                                        <p style="width: 250px;font-size: 11px;color: #f8f9fa;margin-top: 10px;">Lorem ipsum dolor sit amet, atque eaque eius esse et harum inventore ipsam  nam necessi is the tatibus nemo pariatur provident.</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                       <div class="col-12 col-md-4 wow fadeInLeft ani-delay-2-7 artist-hv " style="transition: 0.5s">
+                                           <div class="card card-5 shadow mt-5" style="width: 300px;height: 270px">
+                                               <div class="card-header d-flex justify-content-between">
+                                                   <div class="d-flex  justify-content-center">
+                                                       <i class="feather-map-pin" style="color: var(--purple);font-size: 16px"></i>
+                                                       <p class="ms-2 fw-bolder" style="font-size: 10px;color: var(--primary)">New York,NY</p>
+                                                   </div>
+                                                   <p class="fw-bolder" style="font-size: 10px;color: var(--primary)">Musician</p>
+                                               </div>
+                                               <div class="card-body">
+                                                   <div class="card-child">
+                                                       <p class="text-white fw-bolder">Blake Shelton</p>
+                                                       <div class="cross"></div>
+                                                       <p style="width: 250px;font-size: 11px;color: #f8f9fa;margin-top: 10px;">Lorem ipsum dolor sit amet, atque eaque eius esse et harum inventore ipsam  nam necessi is the tatibus nemo pariatur provident.</p>
+                                                   </div>
+                                               </div>
+
+                                           </div>
+                                       </div>
+
+                                        <div class="col-12 col-md-4 wow fadeInLeft ani-delay-3 artist-hv  " style="transition: 0.5s">
+                                            <div class="card card-6 shadow mt-5" style="width: 300px;height: 270px">
+                                                <div class="card-header d-flex justify-content-between">
+                                                    <div class="d-flex  justify-content-center">
+                                                        <i class="feather-map-pin" style="color: var(--purple);font-size: 16px"></i>
+                                                        <p class="ms-2 fw-bolder" style="font-size: 10px;color: var(--primary)">New York,NY</p>
+                                                    </div>
+                                                    <p class="fw-bolder" style="font-size: 10px;color: var(--primary)">Musician</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="card-child">
+                                                        <p class="text-white fw-bolder">Blake Shelton</p>
+                                                        <div class="cross"></div>
+                                                        <p style="width: 250px;font-size: 11px;color: #f8f9fa;margin-top: 10px;">Lorem ipsum dolor sit amet, atque eaque eius esse et harum inventore ipsam  nam necessi is the tatibus nemo pariatur provident.</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="wow fadeIn ani-delay-2-7" style="width: 300px;display: flex;justify-content: space-between;align-items: center;margin:-15px auto;">
+                                        <button class="btn btn-outline-primary" id="back" href=".slick-mom1" data-bs-target="prev">
+                                            <i class="feather-arrow-left"></i>
+                                        </button>
+                                        <button class="btn btn-outline-primary" id="next">
+                                            <i class="feather-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="party" class="container-fluid party pb-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row min-vh-100 mt-5">
+                    <div class="col-12 mt-5">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="fw-bolder text-uppercase wow slideInLeft" style="color: var(--primary)">Cloobin Party</h4>
+                            <small class="fw-bolder text-white party-md wow slideInRight ani-delay-1">Dress sharp, tie your knot, and meet us at Cloobin party — the best place for your bachelor party celebration.</small>
+                        </div>
+                    </div>
+                        <div class="col-12 col-md-5 mt-5 mt-md-0 wow fadeIn ani-delay-2-5">
+                            <img src="images/party1.png" class="p-img-1 party-hv">
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 mt-md-0 wow fadeIn ani-delay-2-6">
+                            <img src="images/party2.png" class="p-img-2 party-hv">
+                        </div>
+                        <div class="col-12 col-md-3 mt-3 mt-md-0 wow fadeIn ani-delay-2-7">
+                            <img src="images/party3.png" class="p-img-3 party-hv">
+                        </div>
+                        <div class="col-12 col-md-3 mt-3 wow fadeIn ani-delay-3">
+                            <img src="images/party4.png" class="p-img-4 party-hv">
+                        </div>
+                        <div class="col-12 col-md-7 mt-3 wow fadeIn ani-delay-3-5">
+                            <img src="images/party5.png" class="p-img-5 party-hv">
+                        </div>
+                        <div class="col-12 col-md-2 mt-3 wow fadeIn ani-delay-4">
+                            <img src="images/party6.png" class="p-img-6 party-hv">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="contact" class="container-fluid contact">
+    <div class="row">
+        <div class="col-12" style="background: linear-gradient(to left,#46C2FF,#BD11FA);opacity: 0.7;height: 480px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                 <div class="d-flex justify-content-between align-items-center">
+                                     <div class="party-text-1 wow fadeInLeft">
+                                         <h4 class="fw-bolder text-white text-uppercase">Contacts</h4>
+                                         <div class="underline"></div>
+                                     </div>
+                                     <div class="logo2 wow bounce ani-delay-1">
+                                         <img src="images/logo2.png" class="logo-2">
+                                     </div>
+                                 </div>
+                            </div>
+                            <div class="col-12">
+                                <p class="text-white contact-md-text" style="font-size: 14px;width: 1069px;margin-top: 38px;">You begin with a text, you sculpt information, you chisel away what's not needed, you come to the point, make things clear, add value, you're a content person, you like words. Design is no afterthought, far from it, but it comes in a deserved second. Anyway, you still use Lorem Ipsum and rightly so, as it will always have a place in the web workers toolbox, as things happen, not always the way you like it, not always in the preferred order. Even if your less into design and more into content strategy you may find some redeeming value with, wait for it, dummy copy, no less.</p>
+                            </div>
+                            <div class="col-12">
+                                <p class="text-white contact-md-text2" style="font-size: 14px;width: 1069px">There's lot of hate out there for a text that amounts to little more than garbled words in an old language. The villagers are out there with a vengeance to get that Frankenstein, wielding torches and pitchforks, wanting to tar and feather it at the least, running it out of town in shame.</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="text-center mt-5 wow lightSpeedIn ani-delay-2">
+                                    <button class="btn text-white fw-bolder d-none d-md-block contact-hv2" style="background-color: var(--background);width: 130px;height: 41px;line-height: 11px;">Contact</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 contact-md-1" style="background-color: var(--background);height: 460px">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-5 wow slideInLeft ani-delay-2">
+                        <div>
+                            <img src="images/logo.png" class="logo1-2">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7 last-md" style="margin-top: 107px">
+                        <div class="row">
+                            <div class="col-12 col-md-4 wow slideInRight ani-delay-2">
+                                <div class="contact-md-2">
+                                    <p class="fw-bolder ms-3 mb-3" style="color: var(--primary)">Contact</p>
+                                    <div class="d-flex">
+                                       <div class="ms-3" style="width: 23px;height: 24px;border: 1px solid var(--primary);border-radius: 50%;text-align: center;">
+                                           <i class="feather-facebook" style="color: var(--primary);"></i>
+                                       </div>
+                                        <div class="ms-3" style="width: 23px;height: 24px;border: 1px solid var(--primary);border-radius: 50%;text-align: center;">
+                                            <i class="feather-twitter" style="color: var(--primary);"></i>
+                                        </div>
+                                        <div class="ms-3" style="width: 23px;height: 24px;border: 1px solid var(--primary);border-radius: 50%;text-align: center;">
+                                            <i class="feather-instagram" style="color: var(--primary);"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 wow slideInRight ani-delay-2-5">
+                                <div class="text-start">
+                                    <p class="fw-bolder mb-3" style="color: var(--primary)">Quick Links</p>
+                                    <div class="d-flex flex-column">
+                                        <small class="text-white mb-3 contact-hv3">Home</small>
+                                        <small class="text-white mb-3 contact-hv3">Event</small>
+                                        <small class="text-white mb-3 contact-hv3">About Us</small>
+                                        <small class="text-white mb-3 contact-hv3">Contact</small>
+                                        <small class="text-white mb-3 contact-hv3">FAQ</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 wow slideInRight ani-delay-2-6">
+                                <div>
+                                    <p class="fw-bolder mb-3" style="color: var(--primary)">About Us</p>
+                                    <small class="text-white text-start contact-hv3" style="width: 300px">
+                                        You begin with a text, you sculpt information, you chisel away what's not needed, you come to the point, make things clear, add value, you're a content person, you like words.
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col-12 wow bounce ani-delay-4" style="margin-top: 69px;">
+                                <small class="text-white text-center contact-hv3">©  All Rights Reserved| Designed By KorolAlena</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="vendor/bootstrap/js/bootstrap.js"></script>
+<script src="js/jquery.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/way_point/jquery.waypoints.js"></script>
+<script src="vendor/WOW-master/dist/wow.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+    new WOW().init();
+    $('.slick-mom').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
+    });
+</script>
+</body>
+</html>
